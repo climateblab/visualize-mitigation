@@ -1,0 +1,260 @@
+svg { 
+  height: 100%;
+  width: 100%;
+}
+
+#container {
+    position: relative;
+    width: 960px;
+    height: 500px;
+    margin: 0 auto;
+    top: 10px;
+    z-index: 10;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}
+
+#road {
+    position: absolute;
+    width: 940px;
+    height:210px;
+    top: 25px;
+    left: 10px;
+    background: white;
+}
+
+#speedo {
+    position: absolute;
+    width: 240px;
+    height:240px;
+    bottom: 30px;
+    left: 35px;
+    background: white;
+}
+
+#lights {
+    position: absolute;
+    width: 100px;
+    height:220px;
+    bottom: 18px;
+    left: 300px;
+    background: white;
+}
+
+.lights {
+    stroke: black;
+    stroke-width: 3;
+    opacity: 0.1;
+}
+
+#brake_scale {
+    position: absolute;
+    width: 80px;
+    height:240px;
+    bottom: 20px;
+    left: 430px;
+    background: white;
+}
+
+#warning {
+    position: absolute;
+    width: 60px;
+    height:20px;
+    bottom:235px;
+    left: 520px;
+    background: transparent;
+    z-index: 100;
+}
+
+#brake_slider {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    bottom: 30px;
+    left: 495px;
+    background: white;
+    border-color: blue;
+    border-width: 3px;
+    /*opacity: 0.25;*/
+}
+
+.ui-slider-handle { display:none; }
+
+#brake_data {
+    position: absolute;
+    width: 300px;
+    height:100px;
+    bottom: 150px;
+    right: 50px;
+    background: white;
+    opacity: 0.5;
+}
+
+#date {
+    position: absolute;
+    width: 300px;
+    height:150px;
+    bottom: 45px;
+    right: 35px;
+    background: white;
+    opacity: 1;
+}
+
+#brake {
+    position: absolute;
+    width: 500px;
+    height: 10px;
+    bottom: 10px;
+    left: 10px;
+    background: white;
+    opacity: 0.25;
+}
+
+#speed_unit {
+    position: absolute;
+    top: 140px;
+    left: 95px;
+    text-align:center;
+    margin: 0 auto;
+}
+
+#dist_unit {
+    position: absolute;
+    top: 100px;
+    left: 105px;
+    text-align:center;
+    margin: 0 auto;
+}
+
+/*
+svg {
+    border: 1px dashed gray;
+}
+*/
+
+svg text {
+    /*fill: blue;*/
+    font-size: 12pt;
+}
+
+#left_col {
+   float:left;
+   width:450px;
+}
+#right_col {
+   float:right;
+   width:450px;
+}
+
+#clear {
+ clear:both;
+}
+
+#text {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    /*font-size: 14px;*/
+}
+
+.gauge path {
+    stroke: steelblue;
+    stroke-width: 4;
+    fill: none;
+}
+
+.gauge .domain {
+    stroke-width: 2px;
+    stroke: black;
+}
+
+.gauge .tick line {
+    stroke: black;
+    stroke-width: 2px;
+}
+        
+.gauge line {
+    stroke: black;
+}
+
+.gauge .arc, .gauge .cursor {
+    opacity: 0;
+}
+
+.gauge .major {
+    fill: black;
+    font-size: 20px;
+}
+        
+.gauge .indicator {
+    stroke: black;
+    fill: black;
+    stroke-width: 4px;
+}
+
+.datedisplay .on {
+    fill: black;
+}
+
+.datedisplay .off {
+    fill: white;
+    opacity: 0;
+}
+
+#blab_area {
+    /*margin: 0 0;*/
+    margin-top: 80px;
+    background: #eee;
+}
+
+#blabs {
+    width: 920px;
+    margin: 0 auto;
+    /*margin-top: 80px;*/  /* 15px? */
+	padding: 0px 50px 20px 50px;
+	text-align: left;
+	/*background: #eee;*/
+	/*border: 1px solid black;*/
+	/*border-radius: 10px;*/
+	line-height: 150%;
+	font-size: 11pt;
+    /*display: none;*/
+    padding: 20px;
+}
+
+.blab {
+    display: inline-block;
+    width: 290px;
+    text-align: center;
+    /*padding: 8px;
+    border-bottom: 1px solid #eee;*/
+}
+
+.blab img {
+	vertical-align: middle;
+    /*width: 200px;*/
+    max-width: 200px;
+    margin-bottom: 10px;
+    /*width: 70px;*/
+    /*max-height: 70px;*/
+}
+
+.blab a {
+    margin-top: 20px;
+	/*color: rgb(0, 0, 255);*/
+	/*cursor: pointer;*/
+    font-size: 11pt;
+	vertical-align: middle;
+}
+
+
