@@ -1,4 +1,1 @@
-visualize-mitigation
-====================
-
-Visualizing climate change mitigation
+![](https://github.com/climateblab/visualize-mitigation/blob/gh-pages/thumb.png)
