@@ -31,165 +31,170 @@
 </svg>
 </div>
 
-<div id="text">
+<div class="text">
 
-<h2> Visualizing climate change mitigation ... $_\widetilde{\odot}\Pi_{\Xi\bar{\odot}}$ </h2>
+  <h2> Visualizing climate change mitigation ... $_\widetilde{\odot}\Pi_{\Xi\bar{\odot}}$ </h2>
 
-<div id="left_col">
+  <div class="left_col">
 
-  <span class="pz_text" ref="stocker_note">Stocker shows</span> both
-  carbon and inaction affect global temperature.  In his model: (1)
-  carbon ($\text{CO}_2$) emissions (per year)
-  <span class="pz_text" ref="emissions_note"> increase
-  exponentially </span> until some chosen date and then decrease
-  exponentially; (2) peak warming is
-  <span class="pz_text" ref="temp_note">proportional to the total
-    (cumulative) carbon emissions</span>.  The model is suitable for
+    <span class="pz_text" ref="stocker_note">Stocker shows</span> both
+    carbon and inaction affect global temperature.  In his model: (1)
+    carbon ($\text{CO}_2$) emissions (per year)
+    <span class="pz_text" ref="emissions_note"> increase
+      exponentially </span> until some chosen date and then decrease
+      exponentially; (2) peak warming is
+    <span class="pz_text" ref="temp_note">proportional to the total
+      (cumulative) carbon emissions</span>.  The model is suitable for
     ball-park engineering design and for guiding climate policy.
 
-  <div class="pz_note" id="stocker_note">
-    Stocker, Thomas F.,
-    "<a href="http://www.climate.unibe.ch/~stocker/papers/stocker13sci.pdf">The
-    Closing Door of Climate Targets</a>" Science, vol. 339, no. 6117,
-    pp. 280-282, 18 January 2013.
+    <div class="pz_note" id="stocker_note">
 
-    *"The linear relationship between cumulative carbon emissions and
-    global climate warming implies that as mitigation is delayed,
-    climate targets become unachievable."*
+      Stocker, Thomas F.,
+      "<a href="http://www.climate.unibe.ch/~stocker/papers/stocker13sci.pdf">The
+	Closing Door of Climate Targets</a>" Science, vol. 339, no. 6117,
+      pp. 280-282, 18 January 2013.
 
-  </div>
+      *"The linear relationship between cumulative carbon emissions
+      and global climate warming implies that as mitigation is
+      delayed, climate targets become unachievable."*
 
-  <div class="pz_note" id="temp_note">
+    </div>
 
-    If $C_\infty$ are the total cumulative carbon emissions, then the
-    global peak warming is
+    <div class="pz_note" id="temp_note">
 
-    $$
-    \Delta T = \beta C_\infty
-    $$
+      If $C_\infty$ are the total cumulative carbon emissions, then the
+      global peak warming is
 
-    where $\beta$ is an empirical factor found from simulations. Here
-    we assume $\beta=0.002^\circ\text{C}/\text{GtC}$. Other values can
-    be selected in the code.
+      $$
+      \Delta T = \beta C_\infty
+      $$
 
-    *Enable the "Coffee" section to see the details of the
-    computation.*
+      where $\beta$ is an empirical factor found from
+      simulations. Here we assume
+      $\beta=0.002^\circ\text{C}/\text{GtC}$. Other values can be
+      selected in the code.
 
-  </div>
+      *Enable the "Coffee" section to see the details of the
+      computation.*
 
-  <div class="pz_note" id="emissions_note">
+    </div>
 
-    Say $E(t)$ is the global anthropogenic emissions (in gigatonnes
-    per year) at year $t$; $E_0$ = 9.3 GtC/yr are the emissions at
-    time $t=t_0=$ 2009; $C_0$ are the cumulative emissions at $t_0$;
-    $r$ is the rate of emissions <i>increase</i> per year until
-    $t=t_1$; $s$ is the rate of emissions <i>decrease</i> after $t_1$
-    (due to some Global Mitigation Scheme (GMS)).
+    <div class="pz_note" id="emissions_note">
 
-    Then, before the GMS
+      Say $E(t)$ is the global anthropogenic emissions (in gigatonnes
+      per year) at year $t$; $E_0$ = 9.3 GtC/yr are the emissions at
+      time $t=t_0=$ 2009; $C_0$ are the cumulative emissions at $t_0$;
+      $r$ is the rate of emissions <i>increase</i> per year until
+      $t=t_1$; $s$ is the rate of emissions <i>decrease</i> after
+      $t_1$ (due to some Global Mitigation Scheme (GMS)).
 
-    $$ E(t_0 < t \leq t_1)=E_0 e^{r(t-t_0)} $$
+      Then, before the GMS
 
-    And, after the GMS
+      $$ E(t_0 < t \leq t_1)=E_0 e^{r(t-t_0)} $$
 
-    $$
-    E(t>t_1)=E_0 e^{r(t_1-t_0)}e^{-s(t-t_1)}
-    $$
+      And, after the GMS
 
-    The cumulative anthropogenic carbon to time $t>t_0$ is
+      $$
+      E(t>t_1)=E_0 e^{r(t_1-t_0)}e^{-s(t-t_1)}
+      $$
 
-    $$
-    C(t)=C_0+\int_{t_0}^{t}E(\tau)~d\tau
-    $$
+      The cumulative anthropogenic carbon to time $t>t_0$ is
 
-    and the total is $C_\infty=C(\infty)$.
+      $$
+      C(t)=C_0+\int_{t_0}^{t}E(\tau)~d\tau
+      $$
 
-    In this presentation we assume piece-wise linear behavior prior to
-    $t_0$. This is outside Stocker's paper, but we note his comment
-    "The exact path of the emissions before $t_0$ is not important
-    here ...".
+      and the total is $C_\infty=C(\infty)$.
 
-    *Enable the "Coffee" section to see the details of the
-    computation.*
+	In this presentation we assume piece-wise linear behavior
+	prior to $t_0$. This is outside Stocker's paper, but we note
+	his comment "The exact path of the emissions before $t_0$ is
+	not important here ...".
+
+	*Enable the "Coffee" section to see the details of the
+	computation.*
  
-  </div>
+    </div>
 
-  As an analogy, imagine your car
-  ($_\widetilde{\odot}\Pi_{\Xi\bar{\odot}}$) creates *all* the
-  anthropogenic carbon in the world, and the total carbon depends on
-  the distance you travel.  The <span class="pz_text"
-  ref="dist_note">further you go</span>, the hotter it gets
-  (<span id="rerun" style="color: blue">run the simulation
-  again</span>).  The <span class="pz_text" ref="speed_note">faster
-  you go</span> the sooner you get there.
+    As an analogy, imagine your car
+    ($_\widetilde{\odot}\Pi_{\Xi\bar{\odot}}$) creates *all* the
+    anthropogenic carbon in the world, and the total carbon depends on
+    the distance you travel.  The <span class="pz_text"
+    ref="dist_note">further you go</span>, the hotter it gets
+    (<span id="rerun" style="color: blue">run the simulation
+    again</span>).  The <span class="pz_text" ref="speed_note">faster
+    you go</span> the sooner you get there.
 
-  <div class="pz_note" id="dist_note">
+    <div class="pz_note" id="dist_note">
 
-    The global mean temperature increase is <i>proportional</i> to the
-    total cumulative carbon (from the model) and so proportional to
-    distance (in the analogy).
+      The global mean temperature increase is <i>proportional</i> to
+      the total cumulative carbon (from the model) and so proportional
+      to distance (in the analogy).
 
-  </div>
+    </div>
 
 
-  <div class="pz_note" id="speed_note">
+    <div class="pz_note" id="speed_note">
 
-    If distance is carbon, then speed is the carbon emissions ($E(t)$
-    in GtC/yr).  That is, the amount of anthropogenic carbon created
-    <i>per year</i>. If emissions are higher it gets warmer sooner.
+      If distance is carbon, then speed is the carbon emissions
+      ($E(t)$ in GtC/yr).  That is, the amount of anthropogenic carbon
+      created <i>per year</i>. If emissions are higher it gets warmer
+      sooner.
 
-  </div>
-
-</div>
-
-<div  id="right_col">
-
-  Initially all is well (green light) and you accelerate vigorously
-  (yellow light).  Then things go awry, and in 2009 you see a red
-  light.
-  <span class="pz_text" ref="brake_note">*Your decision is when and
-  how hard to brake*</span>.  Brake later and you must brake harder
-  (before reaching a given temperature).  Pass a point on the road
-  (i.e., temperature) and no amount of braking can take you back
-  (Stocker's "closing door").
-
-  Click the green "GO!" button and years begin to pass and you're soon
-  at the yellow light. After the red light (year 2009) *click in the
-  blue rectangle* to select a braking level (0%-10%), and see the
-  ultimate effect on global temperature.  Hover the mouse for more
-  details.
-
-</div>
-
-<div class="pz_note" id="brake_note">
-
-  "Braking" corresponds to the introduction of a Global Mitigation
-  Scheme (GMS) in Stocker---causing an exponential decay in the
-  emissions from the point of braking ($t_1$) onwards.
-
-</div>
-
-<div id="clear"></div>
-
-</div>
-
-<div>
-
-  <div id="container">
-
-    <div id="road"></div>
-    <div id="speedo" title="Speedometer shows the rate of carbon
-    emissions in GtC/yr."></div>
-    <div id="lights"></div>
-    <div id="date"></div>
-    <div id="brake_data"></div>
-    <div id="thermo"></div>
-    <div id="brake_scale"></div>
-    <div id="brake_slider"></div>
-    <div id="warning"></div>
+    </div>
 
   </div>
+
+  <div class="right_col">
+
+    Initially all is well (green light) and you accelerate vigorously
+    (yellow light).  Then things go awry, and in 2009 you see a red
+    light.
+    <span class="pz_text" ref="brake_note">*Your decision is when and
+      how hard to brake*</span>.  Brake later and you must brake
+    harder (before reaching a given temperature).  Pass a point on
+    the road (i.e., temperature) and no amount of braking can take
+    you back (Stocker's "closing door").
+
+    Click the green "GO!" button and years begin to pass and you're
+    soon at the yellow light. After the red light (year 2009) *click
+    in the blue rectangle* to select a braking level (0%-10%), and see
+    the ultimate effect on global temperature.  Hover the mouse for
+    more details.
+
+  </div>
+
+  <div class="pz_note" id="brake_note">
+
+    "Braking" corresponds to the introduction of a Global Mitigation
+    Scheme (GMS) in Stocker---causing an exponential decay in the
+    emissions from the point of braking ($t_1$) onwards.
+
+  </div>
+
+  <div class="clear"></div>
+
+  <div>
+
+    <div id="container">
+
+      <div id="road"></div>
+      <div id="speedo" title="Speedometer shows the rate of carbon
+			      emissions in GtC/yr."></div>
+      <div id="lights"></div>
+      <div id="date"></div>
+      <div id="brake_data"></div>
+      <div id="thermo"></div>
+      <div id="brake_scale"></div>
+      <div id="brake_slider"></div>
+      <div id="warning"></div>
+
+    </div>
+  
+  </div>
+
+  <br>
+  
+  Powered by <a href="http://puzlet.org/">Puzlet</a>.
   
 </div>
-
-

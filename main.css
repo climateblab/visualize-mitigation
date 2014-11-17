@@ -137,20 +137,20 @@ svg text {
     font-size: 12pt;
 }
 
-#left_col {
+.left_col {
    float:left;
    width:450px;
 }
-#right_col {
+.right_col {
    float:right;
    width:450px;
 }
 
-#clear {
+.clear {
  clear:both;
 }
 
-#text {
+.text {
     width: 960px;
     margin: 0 auto;
 }
